@@ -1,5 +1,5 @@
-#sdhibit/rpi-raspbian
+# Code-Hex/rpi-raspbian
 FROM scratch
-MAINTAINER Steve Hibit <sdhibit@gmail.com>
+MAINTAINER kei kamikawa (@CodeHex)
 
-ADD raspbian.2015.05.05.tar.xz /
+ADD raspbian.2017.01.26.tar.xz /

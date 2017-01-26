@@ -3,6 +3,9 @@ rpi-raspbian
 
 [Raspbian](http://www.raspbian.org/) image for docker on raspberry pi.
 
+THIS IS BASIC VERSION
+---------------------
+This is the same version as the raspbian.(bin, lib, etc...)
 
 Generating
 ----------
