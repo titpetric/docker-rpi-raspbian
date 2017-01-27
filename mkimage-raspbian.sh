@@ -9,7 +9,7 @@ tarFile="raspbian.${today}.tar.xz"
 
 (
 	set -x
-	debootstrap --no-check-gpg --arch=armhf --verbose --include='iproute,iputils-ping' jessie "$rootfsDir" http://archive.raspbian.org/raspbian/
+	debootstrap --no-check-gpg --arch=armhf --verbose --variant=buildd --include='iproute,iputils-ping,vim-tiny,openssh-server,openssh-client' jessie "$rootfsDir" http://archive.raspbian.org/raspbian/
 )
 
 # now for some Docker-specific tweaks
