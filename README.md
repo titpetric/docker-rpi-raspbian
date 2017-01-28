@@ -33,5 +33,5 @@ Running
 This image does not do anything fancy, but if you want to test it out, run the following:
 
 ```bash
-$ docker run --name raspbian -it codehex/rpi-raspbian:latest /bin/bash
+$ docker run --name raspbian -it rpi-raspbian:latest /bin/bash
 ```
