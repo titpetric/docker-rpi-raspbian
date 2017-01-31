@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 set -e
 
+DISTRIBUTION=${DISTRIBUTION:-jessie}
+
 today=$(date +%Y.%m.%d)
 dir="raspbian"
-rootfsDir="raspbian"
-tarFile="raspbian.${today}.tar.xz"
+rootfsDir="raspbian-${DISTRIBUTION}"
+tarFile="raspbian-${DISTRIBUTION}.${today}.tar.xz"
 ( set -x; mkdir -p "$rootfsDir" )
 
 (
 	set -x
-	debootstrap --no-check-gpg --arch=armhf --verbose --variant=buildd --include='iproute,iputils-ping,vim-tiny,openssh-server,openssh-client' jessie "$rootfsDir" http://archive.raspbian.org/raspbian/
+	debootstrap --no-check-gpg --arch=armhf --verbose --variant=buildd --include='iproute,iputils-ping,openssh-client' $DISTRIBUTION "$rootfsDir" http://archive.raspbian.org/raspbian/
 )
 
 # now for some Docker-specific tweaks
