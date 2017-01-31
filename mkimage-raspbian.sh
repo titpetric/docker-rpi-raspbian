@@ -3,10 +3,9 @@ set -e
 
 DISTRIBUTION=${DISTRIBUTION:-jessie}
 
-today=$(date +%Y.%m.%d)
 dir="raspbian"
 rootfsDir="raspbian-${DISTRIBUTION}"
-tarFile="raspbian-${DISTRIBUTION}.${today}.tar.xz"
+tarFile="raspbian-${DISTRIBUTION}.latest.tar.xz"
 ( set -x; mkdir -p "$rootfsDir" )
 
 (

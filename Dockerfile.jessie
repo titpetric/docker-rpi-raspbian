@@ -1,0 +1,3 @@
+# Code-Hex/rpi-raspbian
+FROM scratch
+ADD raspbian-jessie.latest.tar.xz /

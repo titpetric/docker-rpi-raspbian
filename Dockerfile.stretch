@@ -1,0 +1,3 @@
+# Code-Hex/rpi-raspbian
+FROM scratch
+ADD raspbian-stretch.latest.tar.xz /
